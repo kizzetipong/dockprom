@@ -28,6 +28,8 @@ services:
       - 9090
     networks:
       - monitor-net
+    extra_hosts:
+      - "dockerhost:${DOCKER_HOST:-172.17.0.1}"
     labels:
       org.label-schema.group: "monitoring"
 
